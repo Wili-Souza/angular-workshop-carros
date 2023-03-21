@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Orelega+One&display=swap');
+
+body, html {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Akshar', sans-serif;
+    letter-spacing: 1px;
+}
+
+:root {
+    --dark-color: rgb(41, 33, 58);
+    --light-color: #ffffff;
+}
+
+.logo {
+    font-family: 'Orelega One', cursive;
+}
+
+.btn {
+    cursor: pointer;
+    border-style: none;
+    padding: .5rem 1rem;
+    transition: .2s all;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    &:active {
+        opacity: .8;
+    }
+}
+
+.btn-blue {
+    background-color: rgba(67, 67, 237, 0.799);
+    color: var(--light-color);
+}
+
+.btn-red {
+    background-color: rgb(237, 67, 67);
+    color: var(--light-color);
+}
+
+.btn-dark {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.btn-green {
+    background-color: rgb(57, 155, 83);
+    color: var(--light-color);
+}

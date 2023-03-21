@@ -1,0 +1,94 @@
+.new {
+    padding: 3rem 8vw;
+    display: flex;
+    justify-content: center;
+    
+
+    .form-container {
+        width: 100%;
+        max-width: 50rem;
+        border-radius: 5px;
+        padding: 1rem 4rem 2rem 4rem;
+        box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.479);
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+            font-weight: 300;
+        }
+
+        input {
+            width: 80%;
+            background-color: rgb(249, 249, 249);
+            border-radius: 3px;
+            border: 2px solid rgb(232, 232, 232);
+            padding: 5px 0 5px 1rem;
+            font-size: 1rem;
+            transition: .2s all;
+
+            &:focus {
+                border: 2px solid rgb(199, 199, 199);
+                outline: none;
+            }
+
+            &.invalid {
+                border-color: rgb(255, 183, 183);
+                background-color: rgb(255, 233, 233);
+            }
+        }
+
+        input.invalid {
+            border-color: rgb(255, 183, 183);
+            background-color: rgb(255, 233, 233);
+        }
+
+        .error-message {
+            border-radius: 3px;
+            border: 2px solid rgb(255, 183, 183);
+            background-color: rgb(255, 233, 233);
+            padding: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .field-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .center {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: stretch;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        width: 30%;
+        min-width: 13rem;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,23 @@
+<div class="home">
+  <div class="button-container">
+      <button class="btn btn-add btn-blue" routerLink="/new">
+          + Criar novo
+      </button>
+  </div>
+
+  <div class="title-container">
+      <hr> <h2 class="title">Itens existentes</h2> <hr>
+  </div>
+
+  <div class="items-container">
+      <div class="items">
+          <div *ngFor="let item of items" class="item">
+              <h4 class="item-title">{{ item.brand | titlecase }} {{ item.model }}</h4>
+              <span class="name">Ano: {{ item.year }}</span>
+              <span class="name">Placa: {{ item.license }}</span>
+              <button routerLink="/edit/{{ item._id }}" class="btn">Editar</button>
+              <button (click)="onDelete(item)" class="btn btn-red">Deletar</button>
+          </div>
+      </div>
+  </div>
+</div>

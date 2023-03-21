@@ -1,0 +1,60 @@
+<div class="new">
+  <div class="form-container">
+    <form class="form" [formGroup]="itemForm" (ngSubmit)="saveCar()">
+      <h3 class="title center">Edite as informações do carro:</h3>
+
+      <div class="field-container">
+        <label for="brand">Marca:</label>
+        <input
+          id="brand"
+          type="text"
+          formControlName="brand"
+          [class.invalid]="
+            itemForm.get('brand')?.invalid && itemForm.get('brand')?.touched
+          "
+        />
+      </div>
+
+      <div class="field-container">
+        <label for="model">Modelo:</label>
+        <input
+          id="model"
+          type="text"
+          formControlName="model"
+          [class.invalid]="
+            itemForm.get('model')?.invalid && itemForm.get('model')?.touched
+          "
+        />
+      </div>
+
+      <div class="field-container">
+        <label for="year">Ano:</label>
+        <input
+          id="year"
+          type="text"
+          formControlName="year"
+          [class.invalid]="
+            itemForm.get('year')?.invalid && itemForm.get('year')?.touched
+          "
+        />
+      </div>
+
+      <div class="field-container">
+        <label for="license">Placa:</label>
+        <input
+          id="license"
+          type="text"
+          formControlName="license"
+          [class.invalid]="
+            itemForm.get('license')?.invalid && itemForm.get('license')?.touched
+          "
+        />
+      </div>
+
+      <div class="btn-container">
+        <button type="submit" class="btn btn-green">Salvar</button>
+        <button class="btn btn-red" routerLink="/home">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
